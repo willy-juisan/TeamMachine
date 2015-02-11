@@ -1,7 +1,9 @@
 package com.employee.scheduler.nurserostering.domain.custom;
 
 import com.employee.scheduler.common.domain.AbstractPersistable;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+@XStreamAlias("Task")
 public class Task extends AbstractPersistable {
 	private String code;
 	private String description;

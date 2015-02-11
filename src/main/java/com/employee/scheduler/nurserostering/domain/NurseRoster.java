@@ -32,6 +32,9 @@ import com.employee.scheduler.common.domain.AbstractPersistable;
 import com.employee.scheduler.nurserostering.domain.contract.Contract;
 import com.employee.scheduler.nurserostering.domain.contract.ContractLine;
 import com.employee.scheduler.nurserostering.domain.contract.PatternContractLine;
+import com.employee.scheduler.nurserostering.domain.custom.ShiftTypeTaskTodo;
+import com.employee.scheduler.nurserostering.domain.custom.Task;
+import com.employee.scheduler.nurserostering.domain.custom.TaskSkillRequirement;
 import com.employee.scheduler.nurserostering.domain.pattern.Pattern;
 import com.employee.scheduler.nurserostering.domain.request.DayOffRequest;
 import com.employee.scheduler.nurserostering.domain.request.DayOnRequest;
@@ -62,6 +65,11 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
     private List<DayOnRequest> dayOnRequestList;
     private List<ShiftOffRequest> shiftOffRequestList;
     private List<ShiftOnRequest> shiftOnRequestList;
+    
+    // custom for team machine
+    private List<Task> taskList;
+    private List<TaskSkillRequirement> taskSkillRequirementList;
+    private List<ShiftTypeTaskTodo> shiftTypeTaskTodoList;
 
     private List<ShiftAssignment> shiftAssignmentList;
 
@@ -205,7 +213,33 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
         this.shiftOnRequestList = shiftOnRequestList;
     }
 
-    @PlanningEntityCollectionProperty
+    public List<Task> getTaskList() {
+		return taskList;
+	}
+
+	public void setTaskList(List<Task> taskList) {
+		this.taskList = taskList;
+	}
+
+	public List<TaskSkillRequirement> getTaskSkillRequirementList() {
+		return taskSkillRequirementList;
+	}
+
+	public void setTaskSkillRequirementList(
+			List<TaskSkillRequirement> taskSkillRequirementList) {
+		this.taskSkillRequirementList = taskSkillRequirementList;
+	}
+
+	public List<ShiftTypeTaskTodo> getShiftTypeTaskTodoList() {
+		return shiftTypeTaskTodoList;
+	}
+
+	public void setShiftTypeTaskTodoList(
+			List<ShiftTypeTaskTodo> shiftTypeTaskTodoList) {
+		this.shiftTypeTaskTodoList = shiftTypeTaskTodoList;
+	}
+
+	@PlanningEntityCollectionProperty
     public List<ShiftAssignment> getShiftAssignmentList() {
         return shiftAssignmentList;
     }

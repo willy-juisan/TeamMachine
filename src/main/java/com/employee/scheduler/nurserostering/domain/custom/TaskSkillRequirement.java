@@ -1,8 +1,11 @@
 package com.employee.scheduler.nurserostering.domain.custom;
 
+import com.employee.scheduler.common.domain.AbstractPersistable;
 import com.employee.scheduler.nurserostering.domain.Skill;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-public class TaskSkillRequirement {
+@XStreamAlias("TaskSkillRequirement")
+public class TaskSkillRequirement extends AbstractPersistable {
 	private Task task;
 	private Skill skill;
 	

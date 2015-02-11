@@ -16,16 +16,16 @@
 
 package com.employee.scheduler.nurserostering.domain.custom;
 
+import java.util.List;
+
 import com.employee.scheduler.common.domain.AbstractPersistable;
 import com.employee.scheduler.nurserostering.domain.ShiftType;
-import com.employee.scheduler.nurserostering.domain.Skill;
-
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-@XStreamAlias("ShiftTypeSkillRequirement")
+@XStreamAlias("ShiftTypeTaskTodo")
 public class ShiftTypeTaskTodo extends AbstractPersistable {
     private ShiftType shiftType;
-    private Task task;
+    private List<Task> taskList;
 
     public ShiftType getShiftType() {
 		return shiftType;
@@ -33,14 +33,14 @@ public class ShiftTypeTaskTodo extends AbstractPersistable {
 	public void setShiftType(ShiftType shiftType) {
 		this.shiftType = shiftType;
 	}
-	public Task getTask() {
-		return task;
+	public List<Task> getTaskList() {
+		return taskList;
 	}
-	public void setTask(Task task) {
-		this.task = task;
+	public void setTaskList(List<Task> taskList) {
+		this.taskList = taskList;
 	}
 	@Override
     public String toString() {
-        return shiftType + "-" + task;
+        return shiftType + "-" + taskList;
     }
 }

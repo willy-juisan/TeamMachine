@@ -283,7 +283,7 @@ public class NurseRosteringImporter extends AbstractXmlSolutionImporter {
                 index++;
             }
             nurseRoster.setShiftTypeList(shiftTypeList);
-            nurseRoster.setShiftTypeSkillRequirementList(shiftTypeSkillRequirementList);
+//            nurseRoster.setShiftTypeSkillRequirementList(shiftTypeSkillRequirementList);
         }
 
         private void generateShiftList(NurseRoster nurseRoster) throws JDOMException {

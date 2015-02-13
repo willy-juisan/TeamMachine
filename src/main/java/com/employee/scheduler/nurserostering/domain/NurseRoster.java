@@ -52,7 +52,6 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
     private NurseRosterParametrization nurseRosterParametrization;
     private List<Skill> skillList;
     private List<ShiftType> shiftTypeList;
-    private List<ShiftTypeSkillRequirement> shiftTypeSkillRequirementList;
     private List<Pattern> patternList;
     private List<Contract> contractList;
     private List<ContractLine> contractLineList;
@@ -106,14 +105,6 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
 
     public void setShiftTypeList(List<ShiftType> shiftTypeList) {
         this.shiftTypeList = shiftTypeList;
-    }
-
-    public List<ShiftTypeSkillRequirement> getShiftTypeSkillRequirementList() {
-        return shiftTypeSkillRequirementList;
-    }
-
-    public void setShiftTypeSkillRequirementList(List<ShiftTypeSkillRequirement> shiftTypeSkillRequirementList) {
-        this.shiftTypeSkillRequirementList = shiftTypeSkillRequirementList;
     }
 
     public List<Pattern> getPatternList() {
@@ -265,7 +256,6 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
         facts.add(nurseRosterParametrization);
         facts.addAll(skillList);
         facts.addAll(shiftTypeList);
-        facts.addAll(shiftTypeSkillRequirementList);
         facts.addAll(patternList);
         facts.addAll(contractList);
         facts.addAll(contractLineList);
@@ -278,6 +268,9 @@ public class NurseRoster extends AbstractPersistable implements Solution<HardSof
         facts.addAll(dayOnRequestList);
         facts.addAll(shiftOffRequestList);
         facts.addAll(shiftOnRequestList);
+        facts.addAll(taskList);
+        facts.addAll(taskSkillRequirementList);
+        facts.addAll(shiftTypeTaskTodoList);
         // Do not add the planning entity's (shiftAssignmentList) because that will be done automatically
         return facts;
     }

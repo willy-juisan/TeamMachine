@@ -46,6 +46,9 @@ import com.employee.scheduler.nurserostering.domain.request.DayOffRequest;
 import com.employee.scheduler.nurserostering.domain.request.DayOnRequest;
 import com.employee.scheduler.nurserostering.domain.request.ShiftOffRequest;
 import com.employee.scheduler.nurserostering.domain.request.ShiftOnRequest;
+import com.employee.scheduler.nurserostering.domain.custom.Task;
+import com.employee.scheduler.nurserostering.domain.custom.ShiftTypeTaskTodo;
+import com.employee.scheduler.nurserostering.domain.custom.TaskSkillRequirement;
 import com.employee.scheduler.nurserostering.solver.drools.EmployeeAssignmentTotal;
 import com.employee.scheduler.nurserostering.solver.drools.EmployeeConsecutiveAssignmentEnd;
 import com.employee.scheduler.nurserostering.solver.drools.EmployeeConsecutiveAssignmentStart;
@@ -83,6 +86,17 @@ rule "oneShiftPerDay"
         $rightAssignment : ShiftAssignment(employee == $employee, shiftDate == $shiftDate, id > $leftId)
     then
         scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+
+// a nurse can only assign to a shift that he/she has the skill to complete the tasks of the shift
+rule "noEmployeeAssignToShiftWithAlternativeSkillTask"
+	when 
+		ShiftAssignment($employee : employee, $shiftType : shiftType)
+		SkillProficiency(employee == $employee, $employeeSkill : skill)
+		ShiftTypeTaskTodo(shiftType == $shiftType, $taskList : taskList)
+		not TaskSkillRequirement(skill == $employeeSkill, $taskList contains task) 
+	then
+		scoreHolder.addHardConstraintMatch(kcontext, -1);
 end
 
 // ############################################################################

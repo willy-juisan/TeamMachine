@@ -1,6 +1,6 @@
 <NurseRoster id="1">
   <id>0</id>
-  <code>sprint01</code>
+  <code>team-machine1</code>
   <nurseRosterParametrization id="2">
     <firstShiftDate id="3">
       <id>0</id>
@@ -111,15 +111,15 @@
   <skillList id="19">
     <Skill id="skill1">
       <id>0</id>
-      <code>Basic Nurse</code>
+      <code>Skill1</code>
     </Skill>
     <Skill id="skill2">
-      <id>0</id>
-      <code>Maternity Nurse</code>
+      <id>1</id>
+      <code>Skill2</code>
     </Skill>  
     <Skill id="skill3">
-      <id>0</id>
-      <code>Emergency Nurse</code>
+      <id>2</id>
+      <code>Skill3</code>
     </Skill>  
   </skillList>
   <shiftTypeList id="21">
@@ -128,28 +128,6 @@
     <ShiftType reference="10"/>
     <ShiftType reference="12"/>
   </shiftTypeList>
-  <shiftTypeSkillRequirementList id="22">
-    <ShiftTypeSkillRequirement id="23">
-      <id>0</id>
-      <shiftType reference="6"/>
-      <skill reference="skill1"/>
-    </ShiftTypeSkillRequirement>
-    <ShiftTypeSkillRequirement id="24">
-      <id>1</id>
-      <shiftType reference="8"/>
-      <skill reference="20"/>
-    </ShiftTypeSkillRequirement>
-    <ShiftTypeSkillRequirement id="25">
-      <id>2</id>
-      <shiftType reference="10"/>
-      <skill reference="20"/>
-    </ShiftTypeSkillRequirement>
-    <ShiftTypeSkillRequirement id="26">
-      <id>3</id>
-      <shiftType reference="12"/>
-      <skill reference="20"/>
-    </ShiftTypeSkillRequirement>
-  </shiftTypeSkillRequirementList>
   <patternList id="27">
     <ShiftType2DaysPattern id="28">
       <id>0</id>
@@ -514,8 +492,8 @@
   <employeeList id="78">
     <Employee id="79">
       <id>0</id>
-      <code>0</code>
-      <name>0</name>
+      <code>A</code>
+      <name>A</name>
       <contract reference="32"/>
       <dayOffRequestMap id="80">
         <entry>
@@ -1081,8 +1059,8 @@
     </Employee>
     <Employee id="171">
       <id>1</id>
-      <code>1</code>
-      <name>1</name>
+      <code>B</code>
+      <name>B</name>
       <contract reference="32"/>
       <dayOffRequestMap id="172">
         <entry>
@@ -1508,8 +1486,8 @@
     </Employee>
     <Employee id="239">
       <id>2</id>
-      <code>2</code>
-      <name>2</name>
+      <code>C</code>
+      <name>C</name>
       <contract reference="32"/>
       <dayOffRequestMap id="240">
         <entry>
@@ -1795,8 +1773,8 @@
     </Employee>
     <Employee id="283">
       <id>3</id>
-      <code>3</code>
-      <name>3</name>
+      <code>D</code>
+      <name>D</name>
       <contract reference="32"/>
       <dayOffRequestMap id="284">
         <entry>
@@ -1977,8 +1955,8 @@
     </Employee>
     <Employee id="309">
       <id>4</id>
-      <code>4</code>
-      <name>4</name>
+      <code>E</code>
+      <name>E</name>
       <contract reference="40"/>
       <dayOffRequestMap id="310">
         <entry>
@@ -2124,8 +2102,8 @@
     </Employee>
     <Employee id="329">
       <id>5</id>
-      <code>5</code>
-      <name>5</name>
+      <code>F</code>
+      <name>F</name>
       <contract reference="40"/>
       <dayOffRequestMap id="330">
         <entry>
@@ -2271,8 +2249,8 @@
     </Employee>
     <Employee id="349">
       <id>6</id>
-      <code>6</code>
-      <name>6</name>
+      <code>G</code>
+      <name>G</name>
       <contract reference="48"/>
       <dayOffRequestMap id="350">
         <entry>
@@ -2418,8 +2396,8 @@
     </Employee>
     <Employee id="369">
       <id>7</id>
-      <code>7</code>
-      <name>7</name>
+      <code>H</code>
+      <name>H</name>
       <contract reference="48"/>
       <dayOffRequestMap id="370">
         <entry>
@@ -2565,8 +2543,8 @@
     </Employee>
     <Employee id="389">
       <id>8</id>
-      <code>8</code>
-      <name>8</name>
+      <code>I</code>
+      <name>I</name>
       <contract reference="56"/>
       <dayOffRequestMap id="390">
         <entry>
@@ -2747,8 +2725,8 @@
     </Employee>
     <Employee id="415">
       <id>9</id>
-      <code>9</code>
-      <name>9</name>
+      <code>J</code>
+      <name>J</name>
       <contract reference="56"/>
       <dayOffRequestMap id="416">
         <entry>
@@ -2897,52 +2875,52 @@
     <SkillProficiency id="436">
       <id>0</id>
       <employee reference="79"/>
-      <skill reference="20"/>
+      <skill reference="skill1"/>
     </SkillProficiency>
     <SkillProficiency id="437">
       <id>1</id>
       <employee reference="171"/>
-      <skill reference="20"/>
+      <skill reference="skill2"/>
     </SkillProficiency>
     <SkillProficiency id="438">
       <id>2</id>
       <employee reference="239"/>
-      <skill reference="20"/>
+      <skill reference="skill3"/>
     </SkillProficiency>
     <SkillProficiency id="439">
       <id>3</id>
       <employee reference="283"/>
-      <skill reference="20"/>
+      <skill reference="skill1"/>
     </SkillProficiency>
     <SkillProficiency id="440">
       <id>4</id>
       <employee reference="309"/>
-      <skill reference="20"/>
+      <skill reference="skill2"/>
     </SkillProficiency>
     <SkillProficiency id="441">
       <id>5</id>
       <employee reference="329"/>
-      <skill reference="20"/>
+      <skill reference="skill3"/>
     </SkillProficiency>
     <SkillProficiency id="442">
       <id>6</id>
       <employee reference="349"/>
-      <skill reference="20"/>
+      <skill reference="skill1"/>
     </SkillProficiency>
     <SkillProficiency id="443">
       <id>7</id>
       <employee reference="369"/>
-      <skill reference="20"/>
+      <skill reference="skill2"/>
     </SkillProficiency>
     <SkillProficiency id="444">
       <id>8</id>
       <employee reference="389"/>
-      <skill reference="20"/>
+      <skill reference="skill3"/>
     </SkillProficiency>
     <SkillProficiency id="445">
       <id>9</id>
       <employee reference="415"/>
-      <skill reference="20"/>
+      <skill reference="skill1"/>
     </SkillProficiency>
   </skillProficiencyList>
   <shiftDateList id="446">
@@ -4007,4 +3985,96 @@
       <indexInShift>0</indexInShift>
     </ShiftAssignment>
   </shiftAssignmentList>
+  <taskList id="taskList1">
+    <Task id="task1">
+      <id>0</id>
+      <code>T1</code>
+      <description>Task1</description>
+    </Task>
+    <Task id="task2">
+      <id>1</id>
+      <code>T2</code>
+      <description>Task2</description>
+    </Task>  
+    <Task id="task3">
+      <id>2</id>
+      <code>T3</code>
+      <description>Task3</description>
+    </Task>
+    <Task id="task4">
+      <id>3</id>
+      <code>T4</code>
+      <description>Task4</description>
+    </Task>
+    <Task id="task5">
+      <id>4</id>
+      <code>T5</code>
+      <description>Task5</description>
+    </Task>
+    <Task id="task6">
+      <id>5</id>
+      <code>T6</code>
+      <description>Task6</description>
+    </Task>  
+  </taskList>
+  <taskSkillRequirementList id="taskSkillReqList1">
+    <TaskSkillRequirement id="taskSkillReq1">
+      <id>0</id>
+      <task reference="task1" />
+      <skill reference="skill1" />      
+    </TaskSkillRequirement>
+    <TaskSkillRequirement id="taskSkillReq2">
+      <id>1</id>
+      <task reference="task2" />
+      <skill reference="skill1" />      
+    </TaskSkillRequirement>
+    <TaskSkillRequirement id="taskSkillReq3">
+      <id>2</id>
+      <task reference="task3" />
+      <skill reference="skill2" />      
+    </TaskSkillRequirement>
+    <TaskSkillRequirement id="taskSkillReq4">
+      <id>3</id>
+      <task reference="task4" />
+      <skill reference="skill2" />      
+    </TaskSkillRequirement>
+    <TaskSkillRequirement id="taskSkillReq5">
+      <id>4</id>
+      <task reference="task5" />
+      <skill reference="skill3" />      
+    </TaskSkillRequirement>
+    <TaskSkillRequirement id="taskSkillReq6">
+      <id>5</id>
+      <task reference="task6" />
+      <skill reference="skill3" />      
+    </TaskSkillRequirement>
+  </taskSkillRequirementList>
+  <shiftTypeTaskTodoList>
+    <ShiftTypeTaskTodo id="shiftTypeTaskTodo1">
+      <shiftType reference="6" />
+      <taskList id="taskList2">
+        <Task reference="task1" />
+        <Task reference="task2" />
+      </taskList>
+    </ShiftTypeTaskTodo>
+    <ShiftTypeTaskTodo id="shiftTypeTaskTodo2">
+      <shiftType reference="8" />
+      <taskList id="taskList2">
+        <Task reference="task3" />
+        <Task reference="task4" />
+      </taskList>
+    </ShiftTypeTaskTodo>
+    <ShiftTypeTaskTodo id="shiftTypeTaskTodo3">
+      <shiftType reference="10" />
+      <taskList id="taskList3">
+        <Task reference="task5" />
+      </taskList>
+    </ShiftTypeTaskTodo>
+    <ShiftTypeTaskTodo id="shiftTypeTaskTodo4">
+      <shiftType reference="12" />
+      <taskList id="taskList4">
+        <Task reference="task6" />
+      </taskList>
+    </ShiftTypeTaskTodo>
+  </shiftTypeTaskTodoList>
 </NurseRoster>
